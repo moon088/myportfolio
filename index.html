@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>私のポートフォリオ</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Montserrat フォントを使用 -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- 左側スライドアウトサイドバー（目次） -->
+  <!-- 左側スライドアウトメニュー -->
   <aside id="sidebar">
-    <h2>menu</h2>
+    <h2>Menu</h2>
     <ul>
-      <li><a href="#profile">profile</a></li>
-      <li><a href="#research">research</a></li>
+      <li><a href="#profile">プロフィール</a></li>
+      <li><a href="#research">研究概要</a></li>
       <li><a href="#thesis">論文スライド</a></li>
       <li><a href="#achievements">実績</a></li>
       <li><a href="#projects">プロジェクト</a></li>
@@ -23,21 +29,40 @@
   <!-- ヘッダーとナビゲーション -->
   <header>
     <h1>私のポートフォリオ</h1>
+    <nav>
+      <ul>
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#research">研究概要</a></li>
+        <li><a href="#thesis">論文スライド</a></li>
+        <li><a href="#achievements">実績</a></li>
+        <li><a href="#projects">プロジェクト</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- メインコンテンツ -->
   <main>
+    <!-- ヒーローセクション（アイキャッチ）-->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>ようこそ！</h2>
+        <p>深層学習×データサイエンスの取り組みを紹介するポートフォリオサイトへようこそ。</p>
+        <a href="#profile" class="cta-button">詳しく見る</a>
+      </div>
+    </section>
+
     <!-- プロフィール -->
     <section id="profile" class="content-section">
       <h2>プロフィール</h2>
-      <p>私は大学院出身で、深層学習を中心とした研究を行っています。  
+      <p>私は大学院出身で、深層学習を中心とした研究を行っています。<br />
          さまざまなプロジェクトに取り組み、データサイエンスや機械学習の分野で実績を積んできました。</p>
     </section>
 
     <!-- 研究概要 -->
     <section id="research" class="content-section">
       <h2>研究概要</h2>
-      <p>私の研究は主に深層学習を用いた応用問題の解決に焦点を当てています。  
+      <p>私の研究は主に深層学習を用いた応用問題の解決に焦点を当てています。<br />
          高精度な予測モデルの構築や、効率的なデータ処理手法の開発など、多岐にわたるテーマに取り組んでいます。</p>
     </section>
 
@@ -69,14 +94,16 @@
     <!-- その他のプロジェクト -->
     <section id="projects" class="content-section">
       <h2>プロジェクト</h2>
-      <p>その他、個人プロジェクトやオープンソースへの貢献等を紹介しています。  
+      <p>その他、個人プロジェクトやオープンソースへの貢献等を紹介しています。<br />
          ここに各プロジェクトの概要やリンクを追加してください。</p>
     </section>
   </main>
 
   <!-- お問い合わせ -->
   <footer id="contact">
-    <p>メールアドレス: <a href="mailto:ynaoya2002@gmail.com">ynaoya2002@gmail.com</a></p>
+    <p>メールアドレス: 
+      <a href="mailto:ynaoya2002@gmail.com">ynaoya2002@gmail.com</a>
+    </p>
   </footer>
 </body>
 </html>
