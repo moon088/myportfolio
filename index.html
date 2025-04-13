@@ -7,7 +7,76 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>ようこそ！私のポートフォリオサイトへ</h1>
-  <p>ここに自己紹介やプロジェクトの詳細を記載します。</p>
+  <!-- ヘッダーとナビゲーション -->
+  <header>
+    <h1>私のポートフォリオ</h1>
+    <nav>
+      <ul>
+        <li><a href="#profile">プロフィール</a></li>
+        <li><a href="#research">研究概要</a></li>
+        <li><a href="#thesis">論文スライド</a></li>
+        <li><a href="#achievements">実績</a></li>
+        <li><a href="#projects">プロジェクト</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <!-- プロフィール -->
+    <section id="profile" class="content-section">
+      <h2>プロフィール</h2>
+      <p>私は大学院出身で、深層学習を中心とした研究を行っています。  
+         さまざまなプロジェクトに取り組み、データサイエンスや機械学習の分野で実績を積んできました。</p>
+    </section>
+
+    <!-- 研究概要 -->
+    <section id="research" class="content-section">
+      <h2>研究概要</h2>
+      <p>私の研究は主に深層学習を用いた応用問題の解決に焦点を当てています。  
+         高精度な予測モデルの構築や、効率的なデータ処理手法の開発など、多岐にわたるテーマに取り組んでいます。</p>
+    </section>
+
+    <!-- 卒業論文発表スライド -->
+    <section id="thesis" class="content-section">
+      <h2>卒業論文発表スライド</h2>
+      <p>
+        下記リンクよりスライドをご確認いただけます。  
+        <a href="https://example.com/your-thesis-slides.pdf" target="_blank">スライドを見る</a>
+      </p>
+      <!-- ※PDFを直接サイト内に表示させたい場合は iframe を利用する方法もあります -->
+      <div class="iframe-container">
+        <iframe src="https://example.com/your-thesis-slides.pdf" frameborder="0"></iframe>
+      </div>
+    </section>
+
+    <!-- 技術的な実績 -->
+    <section id="achievements" class="content-section">
+      <h2>技術的な実績</h2>
+      <ul>
+        <li>
+          AtCoder: <a href="https://atcoder.jp/users/your_atcoder_id" target="_blank">AtCoder プロフィール</a> (水色ランク取得)
+        </li>
+        <li>
+          Kaggle: 
+          <a href="https://www.kaggle.com/your_kaggle_username" target="_blank">Kaggle プロフィール</a> (上位15％の成績)
+          &amp; <a href="https://github.com/your_kaggle_solution_repository" target="_blank">ソリューションリポジトリ</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- その他のプロジェクト -->
+    <section id="projects" class="content-section">
+      <h2>プロジェクト</h2>
+      <p>その他、個人プロジェクトやオープンソースへの貢献等を紹介しています。  
+         ここに各プロジェクトの概要やリンクを追加してください。</p>
+    </section>
+  </main>
+
+  <!-- お問い合わせ -->
+  <footer id="contact">
+    <p>お問い合わせ: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+  </footer>
 </body>
 </html>
