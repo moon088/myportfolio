@@ -78,33 +78,26 @@ section {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 1.0s ease-out, transform 1.0s ease-out;
 }
 .fade-in.visible {
   opacity: 1;
   transform: none;
 }
 
-
-.fade-in.visible {
-  opacity: 1;
-  transform: none;
-}
 
 .section {
   position: relative;
   margin-bottom: 3rem;
 }
 
-/* 角丸の囲みボックス */
 .section-box {
-  border: 1.5px solid #996f51;
+  border: 2.0px solid #996f51;
   border-radius: 12px;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
   background-color: #f5e8da;
 }
 
-/* h2を囲みの上に「またがせる」 */
 .section-title {
   position: absolute;
   top: -0.9rem;
@@ -129,7 +122,7 @@ section {
   margin-bottom: 0; 
 }
 
-/* 中のテキスト */
+
 #contact h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -211,8 +204,8 @@ section {
 @media (max-width: 768px) {
   header {
     padding: 0 1rem;
-    justify-content: center; /* 中央寄せ */
-    flex-wrap: wrap; /* 折り返し可能にする */
+    justify-content: center; 
+    flex-wrap: wrap; 
     height: auto;
   }
 
@@ -224,6 +217,12 @@ section {
   }
 
   header li a {
-    font-size: 1rem; /* 少し小さく */
+    font-size: 1rem; 
+  }
+  section {
+    scroll-margin-top: 200px; 
+  }
+  main {
+    padding-top: 200px; 
   }
 }
