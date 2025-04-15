@@ -82,13 +82,17 @@ section {
 }
 .fade-in.visible {
   opacity: 1;
-  transform: none;
+  transform: translate(0);
 }
 
+
+
 .section {
+  scroll-margin-top: 120px;
   position: relative;
   margin-bottom: 3rem;
 }
+
 
 .section-box {
   border: 2.0px solid #996f51;
@@ -220,6 +224,9 @@ section {
   }
   section {
     scroll-margin-top: 200px; 
+  }
+  .section {
+    scroll-margin-top: 200px;
   }
   main {
     padding-top: 200px; 
