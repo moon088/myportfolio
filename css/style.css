@@ -224,4 +224,7 @@ section {
   main {
     padding-top: 200px; 
   }
+  .fade-in {
+    transform: none !important;
+  }
 }
