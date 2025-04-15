@@ -85,9 +85,13 @@ section {
   transform: none;
 }
 
+<<<<<<< HEAD
 .fade-in.first {
   transform: none;
 }
+=======
+
+>>>>>>> 3cf00a3113f4f755f4db6e9a6ce4259e144d007a
 .section {
   position: relative;
   margin-bottom: 3rem;
