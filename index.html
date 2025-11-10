@@ -32,13 +32,13 @@
 
         <div class="profile-item">
           <div class="label">大学</div>
-          <div class="value">東京理科大学大学院 創域理工学研究科 情報計算科学専攻</div>
+          <div class="value">東京理科大学大学院 創域理工学研究科 情報計算科学専攻 修士1年</div>
         </div>
 
         <div class="profile-item">
           <div class="label">自己紹介</div>
           <div class="value">
-            <p>私は大学院で主にコンピューターサイエンスについて学んでいます。</p>
+            <p>私は大学院で主に情報科学を専攻しAIについて学んでいます。</p>
             <p>その中で深層学習をはじめとした機械学習に興味を持ち、「AIを用いて新たな視点からサービス価値を創出し、サービスを拡大させたい」と思うようになりました。</p>
             <p>研究では、深層学習におけるコスト削減を目指したアルゴリズム研究をしており、その他にもAtcoderやKaggleに挑戦しています。</p>
             <p>データ分析を通じて既存サービスの改善や、新たなサービスの開発に取り組みたいと考えています。</p>
@@ -58,10 +58,9 @@
 
 
           <div class="value" style="margin-top: 1rem; line-height: 2;">
-            現在あらゆる分野で使用されている深層学習ですが、「学習コストが高い」という障壁があります。<br>
-            これは時間的コスト・計算資源コスト両方を指し、AI導入の高いハードルとなっていると考えています。<br>
+            現在あらゆる分野で使用されている深層学習ですが、モデル構築時間や学習に必要なGPU、電力など多様なリソースが必要であり「学習コストが高い」という課題があります。<br>
             そこで私は、数理最適化を用いて最良なモデルを構築するまでの効率を上げ、より学習を簡易化させることを目的とした研究を行っています。<br>
-
+            具体的には、深層学習の正則化手法であるドロップアウト法に対して組み合わせ最適化の導入し、ランダムではなく計画的にドロップするノードを選択することを志向しています。<br>
             学習効率向上を目指して数多くの実験を行う中で、ただ実行するのではなく、自分なりに一つ一つ仮説を立て、それに基づいて実験することを意識しながら日々研究に励んでいます。
           </div>
        </div>
@@ -72,16 +71,19 @@
       <div class="section-box">
         <div class="profile-item">
           <div class="label">使用可能言語</div>
+          <div class="value" style="margin-top: 1rem; line-height: 2;">
+            <p style="margin:0; font-size:16px;">主にPythonを4年間利用しており、下記に記載の競技プログラミング・データ分析コンペティション・研究活動などはすべてPythonで実装しています。その他言語については1年未満の経験になります。</p>
+          </div>
           <div class="value">
             <ul style="list-style-position: inside; padding-left: 1.2rem;">
               <li>Python</li>
               <ul style="list-style-type: circle; padding-left: 1.5rem;">
-                <li>TensorFlow・Keras</li>
                 <li>PyTorch(研究、Kaggleで使用)</li>
                 <li>scikit-learn(Kaggleで使用)</li>
+                <li>その他データ分析ライブラリ</li>
               </ul>
               <li>SQL</li>
-              <li>C++, Java, フロントエンド言語（HTML / CSS / JavaScript）</li>
+              <li>C, C++, Java, フロントエンド言語（HTML / CSS / JavaScript）</li>
               <li>
                 その他開発環境・ツール：Docker, Git/GitHub, Linux(Ubuntu), AWS, Azure
               </li>
@@ -104,13 +106,13 @@
           <div class="value">
             <ul style="list-style-position: inside; padding-left: 1.2rem;">
               <li>
-                AtCoder: Rating 1241 (競技プログラミング人口の上位5%相当)
+                AtCoder(競技プログラミング): Rating 1241 (競技プログラミング人口の上位5%相当)
                 <ul style="padding-left: 1.5rem">
                   <span class="comp-desc">
                     AtCoderで年に一度開催される日本最強プログラマー学生選手権予選の2025年度予選において、27卒の中で上位100名が参加できるオフライン決勝に進出しました。
                   </span><br>
                   <a class="custom-link" href="https://atcoder.jp/users/moon0808" target="_blank">Atcoder Profile</a>
-                  <a class="custom-link" href="https://atcoder.jp/contests/abc412" target="_blank">日本最強プログラマー選手権概要</a>
+                  <a class="custom-link" href="https://atcoder.jp/contests/abc412" target="_blank">日本最強プログラマー学生選手権予選</a>
                 </ul>
               </li>
               <li>
@@ -139,7 +141,7 @@
         </div>
     
         <div class="profile-item">
-          <div class="label">開発経験</div>
+          <div class="label">開発経験</div>          
           <div class="value">
             <ul style="list-style-position: inside; padding-left: 1.2rem;">
                             <li>
@@ -147,23 +149,27 @@
                 
                 
                 <ul style="list-style-type: circle; padding-left: 1.5rem; line-height: 1.9;">
-                <!--
+                  
                   <li>
                     <span class="comp-name">Gaussian Splattingを用いた3D空間生成技術の開発</span>
                     <div style="padding-left: 1rem;">
                       <span class="comp-desc">
-                        説明１
+                        コンピュータビジョン分野であるGaussian Splattingという技術を用いた3D空間生成技術の研究開発を行った。
+                        3D構築モデルの軽量化手法について論文調査を行い、Light Gaussianと呼ばれるモデルの実装まで実施した。実装モデルは以下のサイトとなる。<br>
+                        <a class="custom-link" href="https://lightgaussian.github.io/" target="_blank">Light Gaussian論文・リポジトリサイト</a>
                       </span><br>
                   </li>
+                
                   
-                  <li>
+                  <!--<li>
                     <span class="comp-name">電柱画像のひび割れのAI開発</span>
                     <div style="padding-left: 1rem;">
                       <span class="comp-desc">
                         日本にある電柱から倒壊リスクの特徴であるひび割れを画像から検出するAIを開発。画像内から電柱部分の切り出しと、切り出された電柱画像からひびを検出する２つのAIをAWS上で開発
                       </span><br>
                   </li>
-                  -->
+                -->
+                  
                   <li>
                     <span class="comp-name">RAGを用いたwebページ上の情報を解答する生成AI開発</span>
                     <div style="padding-left: 1rem;">
@@ -172,6 +178,7 @@
                         HTML上のタグ整形などデータクレンジングから、マルチモーダルAI(画像やpdfに対応したAI)への拡張まで行い、Azure Open AIをベースとしたRAGをチーム開発
                       </span><br>
                   </li>
+                <!--
                   <li>
                     <span class="comp-name">電力価格予測AI開発</span>
                     <div style="padding-left: 1rem;">
@@ -180,6 +187,7 @@
                         季節性や国内・海外情勢、発電リソースの状況などから時系列データを予測
                       </span><br>
                   </li>
+                -->
                 </ul>
               </li>
 
