@@ -1,45 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // -------------------------------
-  // Fade-in アニメーションの処理（そのままでOK）
-  // -------------------------------
+  // 1. フェードイン・アニメーションの制御
   const faders = document.querySelectorAll('.fade-in');
-  const options = { threshold: 0.3 };
+
+  const observerOptions = {
+    // threshold: 0.1 は「要素の10%が画面に入ったら」発火させる設定
+    threshold: 0.1,
+    // rootMargin は判定位置の微調整。下端から-50pxの位置で判定（少し余裕を持たせる）
+    rootMargin: "0px 0px -50px 0px"
+  };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       } else {
+        // 再び画面外に出た時に消したい場合は残す。
+        // もし「一度出たら出しっぱなし」にしたい場合は、下の1行を消して observer.unobserve(entry.target) を追加
         entry.target.classList.remove('visible');
       }
     });
-  }, options);
+  }, observerOptions);
 
   faders.forEach(fader => {
-    const rect = fader.getBoundingClientRect();
-    const fullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-    if (fullyVisible) fader.classList.add('visible');
     observer.observe(fader);
   });
 
-  // -------------------------------
-  // アンカーリンクのスムーススクロール補正（ウィンドウ幅に応じて）
-  // -------------------------------
-  const isMobile = window.innerWidth <= 768;
-  const headerHeight = isMobile ? 200 : 120;
-  const scrollOffset = 0;
+  // 2. アンカーリンクのスムーススクロール
   const links = document.querySelectorAll('a[href^="#"]');
 
   links.forEach(link => {
     link.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
-      if (targetId.length > 1 && document.querySelector(targetId)) {
+      const target = document.querySelector(targetId);
+
+      if (targetId.length > 1 && target) {
         e.preventDefault();
-        const target = document.querySelector(targetId);
-        const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - scrollOffset;
+
+        // クリックされた時点でのヘッダーの高さを取得（レスポンシブ対応）
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        
+        // ターゲットの位置を計算
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+        // ヘッダー分＋少しの余裕（20px）を引いてスクロール
+        const offsetPosition = targetPosition - headerHeight - 20;
 
         window.scrollTo({
-          top: offsetTop,
+          top: offsetPosition,
           behavior: 'smooth'
         });
       }

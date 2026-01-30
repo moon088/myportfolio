@@ -232,6 +232,8 @@ section {
     padding-top: 200px; 
   }
   .fade-in {
-    transform: none !important;
+      /* スマホでは動きを小さくして、表示の確実性を優先する */
+      transform: translateY(2px) !important; 
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   }
 }
